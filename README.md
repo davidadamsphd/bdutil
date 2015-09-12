@@ -8,7 +8,7 @@ this repo.
    Start the cluster using extensions/spark/spark_env.sh, e.g.,
 
    `./bdutil --bucket your-bucket -n 1 -P your-project  --env_var_files extensions/spark/spark_env.sh --zone us-central1-a deploy`
-3. While the cluster is starting add the `all-ssh` tag (if necessary).
+3. (Optional) If you see repeated messages about being unable to ssh, you may need to add the `all-ssh` tag.
    If your project has a ssh-whitelist (which is pretty reasonable), you may need to tag your master and workers with `all-ssh`
    so the bdutil script can ssh in and install Spark, etc. The easiest way is to go to https://console.developers.google.com/,
    find your master and workers, and add `all-ssh` on each one. You'll know that you need this if the bdutil script saying
